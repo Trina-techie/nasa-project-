@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-.input-style{
-    @apply px-4 py-2 border-[1px]
+.input-style {
+  @apply px-4 py-2 border border-solid border-slate-700;
+}
+
+@keyframes spacePan {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.animate-space-bg {
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+  background-size: 550px 550px, 350px 350px;
+  background-position: 0 0, 40px 60px;
+  animation: spacePan 400s linear infinite;
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .translate-z-10 {
+    transform: translateZ(30px);
+  }
+  .translate-z-20 {
+    transform: translateZ(60px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

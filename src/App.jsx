@@ -5,16 +5,16 @@ import Hero from './assets/components/Hero/Hero';
 import Services from './assets/components/Services/Services';
 import Banner from './assets/components/Banner/Banner';
 import Banner2 from './assets/components/Banner/Banner2';
-import Footer from './assets/components/Footer/footer';
+import Footer from './assets/components/Footer/Footer';
 import Search from './assets/components/Search/Search';
-
+import About from './assets/components/Navbar/About';
 const App = () => {
   return (
     <div className='bg-black'>
       <div className='h-700px relative'>
-        <video  autoPlay loop muted className='fixed right-0 top-0 h-700px w-full object-cover z-1'>
+        {/* <video  autoPlay loop muted className='fixed right-0 top-0 h-700px w-full object-cover z-1'>
           <source src={bgVideo} type='video/mp4'></source>
-        </video>
+        </video> */}
         <Navbar/>
         <Hero/>
       </div>
